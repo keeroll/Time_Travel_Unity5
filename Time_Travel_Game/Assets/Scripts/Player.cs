@@ -6,20 +6,23 @@ public class Player : MonoBehaviour
 {
 	[SerializeField] TimeController timeController;
 
-	Dictionary<int,PlayerState> recording;
+	Dictionary<int,PlayerState> records;
 
 	//Animator _animator;
+	Rigidbody _rigidBody;
 
 	void Start ()
 	{
 		//_animator = GetComponent<Animator> ();
+		_rigidBody = GetComponent<Rigidbody>();
 
 	}
 
-	public void SetRecording (Dictionary<int, PlayerState> recording)
+	public void StartRecording (Dictionary<int, PlayerState> recording)
 	{
-		this.recording = new Dictionary<int, PlayerState> (recording);
+		this.records = new Dictionary<int, PlayerState> (recording);
 		isPlaying = true;
+		_rigidBody.isKinematic = true;
 
 	}
 
@@ -34,9 +37,9 @@ public class Player : MonoBehaviour
 	{
 		if (isPlaying) 
 		{
-			if (recording.ContainsKey (timeController.time))
+			if (records.ContainsKey (timeController.time))
 			{
-				PlayState(recording [timeController.time]);
+				PlayState(records [timeController.time]);
 			}
 		}
 	}

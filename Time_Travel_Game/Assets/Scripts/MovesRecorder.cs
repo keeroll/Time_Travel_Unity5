@@ -17,20 +17,20 @@ public struct PlayerState
 	}
 }
 
-public class Recorder : MonoBehaviour 
+public class MovesRecorder : MonoBehaviour 
 {
 
 	[SerializeField] TimeController timeController;
 	[SerializeField] Player player;
 
-	Dictionary<int,PlayerState> states = new Dictionary<int, PlayerState> ();
+	Dictionary<int,PlayerState> playerCoordinates = new Dictionary<int, PlayerState> ();
 
 	//Animator _animator;
 
 	void Start ()
 	{
 		//_animator = GetComponent<Animator> ();
-	
+
 	}
 
 
@@ -40,7 +40,7 @@ public class Recorder : MonoBehaviour
 		if (Input.GetKeyDown (KeyCode.P)) 
 		{
 			isRecording = false;
-			player.SetRecording(states);
+			player.StartRecording(playerCoordinates);
 			timeController.time = 0;
 		}
 	}
@@ -52,11 +52,8 @@ public class Recorder : MonoBehaviour
 	{
 		if (isRecording) 
 		{
-			states.Add (timeController.time, new PlayerState (transform.position,
-				/*_animator.GetCurrentAnimatorStateInfo(0).shortNameHash,*/ 
-				transform.localScale.x > 0));
+			playerCoordinates.Add (timeController.time, new PlayerState (transform.position,/*_animator.GetCurrentAnimatorStateInfo(0).shortNameHash,*/ transform.localScale.x > 0));
 		}
-		Debug.Log ("states: " + states.Count);
-	
+
 	}
 }
