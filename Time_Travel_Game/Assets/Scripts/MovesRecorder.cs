@@ -19,6 +19,8 @@ public struct PlayerState
 
 public class MovesRecorder : MonoBehaviour 
 {
+	public Collider otherCollider;
+	public GameObject anotherPortal;
 
 	[SerializeField] TimeController timeController;
 	[SerializeField] Player player;
@@ -37,10 +39,15 @@ public class MovesRecorder : MonoBehaviour
 
 	void Update()
 	{
-		if (Input.GetKeyDown (KeyCode.P)) 
+		if (Input.GetKeyDown (KeyCode.P)) {
+			isRecording = false;
+			player.StartRecording (playerCoordinates);
+			timeController.time = 0;
+		} 
+		else if (otherCollider.transform.position == anotherPortal.transform.position) 
 		{
 			isRecording = false;
-			player.StartRecording(playerCoordinates);
+			player.StartRecording (playerCoordinates);
 			timeController.time = 0;
 		}
 	}
