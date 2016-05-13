@@ -16,6 +16,27 @@ In the case of a bug work-up is set manually start recording playback function.
 
 Button - P.
 
+
+1Week 
+
+3d modelling
+
+2Week
+
+Animation for main player
+
+3Week
+
+Created script MovesRecorder.cs
+
+4Week
+
+Created script Man.cs and Wormhole.cs
+
+5Week
+
+Tested the game
+
 You can watch video review by the link below:
 
 https://www.youtube.com/watch?v=-GHlKoqbr1c
