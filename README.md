@@ -5,7 +5,7 @@ Here we have a little scene, where we can travel back in time.
 
 I use serializefield in units for recording data, which are stored in the dictionary.
 
-The game have 4 portal, every two create one.
+The game have 4 portals, every two create one.
 At the exit of the last portal, recording ends and begins playing action.
 
 The game has a function of two-way reverse (rewind), which works with a copy. 
