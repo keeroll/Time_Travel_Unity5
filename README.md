@@ -1,6 +1,6 @@
 # Time Travel game in Unity5
 
-###Project for university course
+### Project for university course
 Here we have a little scene, where we can travel back in time.
 
 I use serializefield in units for recording data, which are stored in the dictionary.
