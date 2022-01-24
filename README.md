@@ -18,10 +18,8 @@ Button - P.
 
 
 You can watch video review by the link below:
-
 https://www.youtube.com/watch?v=-GHlKoqbr1c
 
 
-You can also download the new biuld by the link below:
-
+You can also download the new build by the link below:
 https://drive.google.com/open?id=0B6gbt0r4_F0VZ0Q0V1VBTDAzWXM
