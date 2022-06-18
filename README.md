@@ -18,6 +18,3 @@ Button - P.
 
 #### Time travel project
 [![Time travel project](https://img.youtube.com/vi/-GHlKoqbr1c/0.jpg)](https://www.youtube.com/watch?v=-GHlKoqbr1c)
-
-You can also download the new build by the link below:
-https://drive.google.com/open?id=0B6gbt0r4_F0VZ0Q0V1VBTDAzWXM
